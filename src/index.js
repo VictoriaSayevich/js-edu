@@ -9,6 +9,10 @@ module.exports = function getTimeForEducation(
     knowsProgramming = true,
     config = {family: 4}
     ) {
-      return 0;
+      const time = 800, full_time = 800 + 500;
+      if (knowsProgramming) {
+        return Math.ceil(time/config[focus]);
+      }
+      return Math.ceil(full_time/config[focus]);
   };
   
